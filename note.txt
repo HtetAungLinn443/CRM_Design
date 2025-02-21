@@ -1,0 +1,19 @@
+DEEK_SEED_TOKEN=sk-627b64daa5ad468cbd7df9b481b5ee95
+DEEK_SEED_API_URL=https://api.deepseek.com
+
+
+
+Laravel Excel 
+Laravel Telescope
+Laravel Backup
+Laravel Mail
+Google Calendar API
+Pusher
+Laravel Localization
+Chart.js or ApexCharts
+Flatpickr
+Drag-and-Drop
+
+AI/ML Libraries (Optional)
+TensorFlow.js or PyTorch
+Laravel AI

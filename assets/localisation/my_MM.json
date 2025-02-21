@@ -1,0 +1,12 @@
+{
+    "sEmptyTable": "မရှိသောဒေတာ",
+    "sInfo": "_TOTAL_ ခုမှ _START_ - _END_ အကြောင်းအရာ",
+    "sInfoEmpty": "အချက်အလက်မရှိပါ",
+    "sInfoFiltered": "(_MAX_ အချက်အလက်မှ ရွေးချယ်ထားသော)",
+    "sLengthMenu": "_MENU_ အချက်အလက်ကို ဖော်ပြပါ",
+    "sLoadingRecords": "ဒေတာများကိုတင်ဆက်နေပါသည်...",
+    "sProcessing": "အလုပ်လုပ်နေပါသည်...",
+    "sSearch": "ရှာဖွေရန်:",
+    "sZeroRecords": "မတွေ့ပါ"
+
+}

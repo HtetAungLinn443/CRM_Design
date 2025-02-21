@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link href="./assets/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="./assets/font/google_font.css" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="./assets/MDB5/css/mdb.min.css" rel="stylesheet" />
+    <!-- Datatable -->
+    <link rel="stylesheet" href="./assets/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="./assets/css/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" href="./assets/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="./assets/css/responsive.dataTables.min.css">
+    <!-- Sweet Alert 2 -->
+    <link rel="stylesheet" href="./assets/css/sweetalert2.css">
+    <!-- Ping code -->
+    <link rel="stylesheet" href="./assets/css/ping-code.css">
+    <!-- Flag Icon -->
+    <link rel="stylesheet" href="./assets/css/flag-icon.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- Jquery -->
+    <script src="./assets/js/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg shadow-sm ">
+        <div class="container-fluid d-flex justify-content-between align-items-center pe-lg-5">
+            <!-- Left Side: Brand -->
+            <div class="d-flex">
+                <a class="navbar-brand text-gradient" href="#">(CRM)</a>
+                <span class="menu-btn me-3">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </div>
+            <!-- Right Side: User Profile Dropdown and Dark Mode Toggle -->
+            <div class="d-flex align-items-center">
+                <!-- Notifications -->
+                <div class="dropdown dropcenter">
+                    <a data-mdb-dropdown-init class="link-secondary me-3 dropdown-toggle hidden-arrow" href="#"
+                        id="navbarNoti" role="button" aria-expanded="false">
+                        <i class="fa-regular fa-bell fa-shake fs-4"></i>
+                        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                    </a>
+                    <ul class="dropdown-menu mt-4 notiMenu" aria-labelledby="navbarNoti"
+                        style="width: 350px; max-height: 200px; overflow-y: auto;">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="d-flex">
+                                    <span>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </span>
+                                    <img src="./assets/img/pp.webp" class="rounded-circle" height="36"
+                                        alt="Black and White" loading="lazy" />
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Some news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                        id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
+                        <img src="./assets//img/pp.webp" class="rounded-circle" height="36"
+                            alt="Black and White Portrait of a Man" loading="lazy" />
+                        <strong class="d-none d-sm-block ms-1">John</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                        <li style="border-bottom: 1px solid gray;">
+                            <a class="dropdown-item" href="#">Htet Aung Linn</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Role : Sale</a>
+                        </li>
+                        <li>
+                            <a id="theme-toggle" class="dropdown-item">
+                                <i class="fa fa-moon"></i> Dark Mode
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Setting</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar -->
+    <div class="sidebar active shadow">
+        <ul class="sidebar-nav" id="sidebar-nav">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i><span>Income</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link collapsed menu-toggle" href="#">
+                    <i class="fa fa-users"></i><span>Customer</span>
+                    <i class="fa fa-chevron-down ms-auto"></i>
+                </a>
+                <ul class="nav-content collapse">
+                    <li>
+                        <a href="#"><i class="fa-regular fa-circle-dot"></i> <span>Customer Lists</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-regular fa-circle-dot"></i> <span>Customer Create</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed menu-toggle" href="#">
+                    <i class="fa-regular fa-calendar"></i><span>Admin</span>
+                    <i class="fa fa-chevron-down ms-auto"></i>
+                </a>
+                <ul class="nav-content collapse">
+                    <li>
+                        <a href="#"><i class="fa-regular fa-circle-dot"></i> <span>Admin Lists</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-regular fa-circle-dot"></i> <span>Admin Create</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed menu-toggle" href="#">
+                    <i class="fa-solid fa-clock"></i><span>Schedule</span>
+                    <i class="fa fa-chevron-down ms-auto"></i>
+                </a>
+                <ul class="nav-content collapse">
+                    <li>
+                        <a href="#"><i class="fa-regular fa-circle-dot"></i> <span>Admin Lists</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-regular fa-circle-dot"></i> <span>Admin Create</span></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="">Version 1.0</div>
+                <div class="dropdown">
+                    <a data-mdb-dropdown-init class="dropdown-toggle" href="#" role="button" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fa fa-language"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li class="active">
+                            <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-mm me-3"></span>
+                                Myanmar</a>
+                        </li>
+                        <li class="">
+                            <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-us me-3"></span>
+                                English</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content active">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h1>Hello</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h1>Hello</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h1>Hello</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h1>Hello</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card card-hover">
+                    <div class="card-body">
+                        <h1>Hello</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <table class="table table-hover" id="datatable" style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th>position</th>
+                                <th>salary</th>
+                                <th>office</th>
+                                <th>start_date</th>
+                                <th>extn</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- MDB -->
+    <script src="./assets/MDB5/js/mdb.umd.min.js"></script>
+    <!-- Datatable -->
+    <script src="./assets/js/datatable.min.js"></script>
+    <script src="./assets/js/datatables.mark.js"></script>
+    <script src="./assets/js/mark.min.js"></script>
+    <!-- Sweet Alert 2 -->
+    <script src="./assets/js/sweetalert2.min.js"></script>
+    <!-- Ping Code -->
+    <script src="./assets/js/ping-code.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/data.js"></script>
+</body>
+
+
+</html>
